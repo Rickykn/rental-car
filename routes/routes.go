@@ -20,4 +20,5 @@ func SetupRoutes(app *fiber.App, db *sql.DB) {
 	api.Post("/register_car", carHandler.RegisterCar)
 	api.Get("/car", carHandler.ShowCars)
 	api.Post("/book_car", carHandler.BookCar)
+	api.Post("/checkin_car", carHandler.Checkin)
 }

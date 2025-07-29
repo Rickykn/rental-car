@@ -13,6 +13,7 @@ type Order struct {
 	DropoffDate     time.Time
 	PickupLocation  string
 	DropoffLocation string
+	OrderCode       string
 }
 
 type BookReq struct {
@@ -21,4 +22,8 @@ type BookReq struct {
 	DropoffDate     string    `json:"dropoff_date" `
 	PickupLocation  string    `json:"pickup_location" `
 	DropoffLocation string    `json:"dropoff_location" `
+}
+
+type CheckinReq struct {
+	OrderCode string `json:"order_code" `
 }
