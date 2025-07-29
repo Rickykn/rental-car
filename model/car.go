@@ -8,4 +8,5 @@ type Car struct {
 	DayRate   float64   `json:"day_rate" db:"day_rate"`
 	MonthRate float64   `json:"month_rate" db:"month_rate"`
 	Image     string    `json:"image" db:"image"`
+	Status    string    `json:"status" db:"status"`
 }
