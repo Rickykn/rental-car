@@ -58,7 +58,7 @@ func NewDB(cfg Config) (*sql.DB, error) {
 
 		// Check connectivity
 		dbErr = dbInstance.Ping()
-		if dbErr == nil && cfg.Logging {
+		if dbErr == nil {
 			log.Println("[DB] Connected to PostgreSQL with singleton")
 		}
 	})

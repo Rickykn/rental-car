@@ -3,7 +3,6 @@ package car
 import (
 	"context"
 	"database/sql"
-	"fmt"
 	"github.com/Rickykn/rental-car/model"
 	"github.com/google/uuid"
 )
@@ -24,7 +23,6 @@ func NewUserRepository(db *sql.DB) ICarRepository {
 }
 
 func (r *carRepository) CreateCar(ctx context.Context, car model.Car) error {
-	fmt.Println(car)
 	query := `
 		INSERT INTO public.cars (car_name, day_rate, month_rate, image) 
 		VALUES( $1, $2, $3, $4)

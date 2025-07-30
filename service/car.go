@@ -16,6 +16,7 @@ type ICarService interface {
 	ShowAllCar(ctx context.Context) ([]model.Car, error)
 	BookCar(ctx context.Context, order model.BookReq) error
 	Checkin(ctx context.Context, checkingReq model.CheckinReq) error
+	//ReturnCar(ctx context.Context) error
 }
 
 type carService struct {
@@ -35,7 +36,6 @@ var (
 )
 
 func (c carService) GenerateOrderNumber(ctx context.Context) (string, error) {
-	fmt.Println("MASUK SINI")
 	prefix := "CR"
 	dateStr := time.Now().Format("020106")
 
